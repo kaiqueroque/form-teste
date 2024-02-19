@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <title>titulo da pagina do formulario</title>
+  <script src="https://app.powercrm.com.br/assets/external/js/pwr_power.js"></script>
+  <script>
+    function loadPage() {
+      PowerCRM.init(['movimento pv go258'])
+    }
+  </script>
+
+  <link rel="stylesheet" href="./bootstrap.css" />
+</head>
+
+<body>
+
+  <div class="box-call-to-action-form pwr_form">
+    <span>Preencha os dados e escolha seu plano!</span>
+    <div class="step" id="pwr_step_1">
+      <div class="group-form">
+        <label for="">Nome:</label>
+        <input type="text" id="pwr_field_name" />
+      </div>
+      <div class="group-form">
+        <label for="">E-mail:</label>
+        <input type="text" id="pwr_field_email" />
+      </div>
+      <div class="group-form">
+        <label for="">WhatsApp:</label>
+        <input type="text" id="pwr_field_mobile" />
+      </div>
+      <div class="group-form">
+        <button type="submit" class="button" id="pwr_step_1_next">
+          Próximo
+        </button>
+      </div>
+    </div>
+    <!-- STEP 2 -->
+    <div class="step" style="display: none" id="pwr_step_2">
+      <div class="group-form">
+        <label for="">Tipo de veículo:</label>
+        <ul>
+          <li>
+            <input type="radio" id="pwr_field_type_car" class="option-input radio" name="pwr_field_type" value="1" />
+            <label for="pwr_field_type_car">Carro</label>
+          </li>
+          <li>
+            <input type="radio" id="pwr_field_type_motorcycle" class="option-input radio" name="pwr_field_type" value="2" />
+            <label for="pwr_field_type_motorcycle">Moto</label>
+          </li>
+          <li>
+            <input id="pwr_field_type_truck" type="radio" class="option-input radio" name="pwr_field_type" value="3" />
+            <label for="pwr_field_type_truck">Caminhão</label>
+          </li>
+        </ul>
+      </div>
+      <div class="row-flexbox">
+        <div class="group-form two-col">
+          <label for="pwr_field_brand">Marca:</label>
+          <select id="pwr_field_brand"></select>
+        </div>
+        <div class="group-form two-col">
+          <label for="pwr_field_year">Ano modelo:</label>
+          <select id="pwr_field_year"></select>
+        </div>
+      </div>
+      <div class="group-form">
+        <label for="pwr_field_model">Modelo:</label>
+        <select id="pwr_field_model"></select>
+      </div>
+      <div class="row-flexbox">
+        <button type="submit" class="back" id="pwr_step_2_back">
+          <i class="icon-left"></i>
+        </button>
+        <button class="button" id="pwr_step_2_next">Próximo</button>
+      </div>
+    </div>
+
+    <div class="step" style="display: none" id="pwr_step_3">
+      <div class="group-form">
+        <label for="pwr_field_state">Moro no Estado:</label>
+        <select id="pwr_field_state"></select>
+      </div>
+      <div class="group-form">
+        <label for="">Na cidade:</label>
+        <select id="pwr_field_city"></select>
+      </div>
+      <div class="group-form">
+        <label for="">Você usa o seu veículo em Táxi ou Aplicativo?</label>
+        <div class="box-input">
+          <input id="pwr_field_uber" type="checkbox" class="option-input checkbox" />
+          <label for="pwr_field_uber">Sim <small>(deixe desmarcado se não usar)</small></label>
+        </div>
+      </div>
+
+      <div class="row-flexbox">
+        <button type="submit" class="back" id="pwr_step_3_back">
+          <i class="icon-left"></i>
+        </button>
+        <button class="button" id="pwr_step_3_go">Escolha Seu Plano</button>
+      </div>
+    </div>
+  </div>
+
+</body>
+</html>
